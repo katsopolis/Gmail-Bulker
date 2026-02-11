@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Bulker",
+  "short_name": "Gmail Bulker",
+  "description": "Download every Gmail attachment with one click while keeping original filenames and formats intact.",
+  "version": "1.0.5",
+  "author": "Katsopolis",
+  "icons": {
+    "16": "img/logo_16.png",
+    "48": "img/logo_48.png",
+    "128": "img/logo_128.png"
+  },
+  "permissions": [
+    "storage",
+    "downloads",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/",
+    "https://inbox.google.com/",
+    "https://www.google-analytics.com/",
+    "https://mail-attachment.googleusercontent.com/*",
+    "https://drive.google.com/*",
+    "https://drive.usercontent.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*", "https://inbox.google.com/*"],
+      "css": ["styles.css"],
+      "js": ["inboxsdk.js", "jszip.min.js", "util.js", "app.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["img/save.png", "pageWorld.js"],
+    "matches": ["https://mail.google.com/*", "https://inbox.google.com/*"]
+  }],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
