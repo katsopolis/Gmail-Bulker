@@ -1,3 +1,67 @@
+<!-- lorewound:standard:start -->
+# Gmail Bulker
+
+<div align="center">
+  <img src="img/logo_128.png" alt="Gmail Bulker logo" width="128" />
+  <p><strong>Bulk Gmail workflow extension</strong></p>
+  <p>Created by Gazi Enes Sedef · Published by Lorewound</p>
+
+  ![Status](https://img.shields.io/badge/status-active-111827?style=flat-square)
+  ![Publisher](https://img.shields.io/badge/publisher-Lorewound-111827?style=flat-square)
+</div>
+
+## ◈ Overview
+
+Gmail Bulker is a Chrome extension for organizing repetitive Gmail actions into a more efficient browser workflow. It provides focused controls while relying on explicitly restricted Google API access.
+
+## ✦ Highlights
+
+- Bulk Gmail operations
+- Chrome extension interface
+- Restricted Google API integration
+
+## ⬡ Technology
+
+- See the detailed project guide and source tree for implementation details.
+
+## ▣ Platforms
+
+- Chrome desktop
+
+## ▶ Getting Started
+
+```text
+Review the project-specific detailed documentation below
+```
+
+Use the versions recorded in the repository lockfiles and manifests. Secrets belong in ignored local environment files or the deployment platform's secret store; never place credentials in client code or commits.
+
+## ✓ Quality and Maintenance
+
+- Maintenance policy: [MAINTENANCE.md](MAINTENANCE.md)
+- Shared legal documentation: [Lorewound Legal Docs](https://github.com/katsopolis/Legal-Docs)
+- Repository: [https://github.com/katsopolis/Gmail-Bulker](https://github.com/katsopolis/Gmail-Bulker)
+
+## ◇ Ownership and Publishing
+
+| Role | Details |
+| --- | --- |
+| Creator and producer | Gazi Enes Sedef |
+| Publisher | Lorewound |
+| Contact | [support@lorewound.com](mailto:support@lorewound.com) |
+| Repository owner | [katsopolis](https://github.com/katsopolis) |
+
+## ⚖ License
+
+This project is proprietary and is not open source. No use, execution, copying, modification, distribution, hosting, or commercial exploitation is permitted without prior written permission. See [LICENSE](LICENSE). Third-party components and assets remain subject to their respective licenses.
+<!-- lorewound:standard:end -->
+
+---
+
+## ◆ Detailed Project Guide
+
+The maintained project summary above is canonical. The original detailed documentation is preserved below for implementation-specific guidance.
+
 ![Extension logo](img/logo_128-revert.png)
 
 # Gmail Bulker
@@ -129,8 +193,12 @@ Gmail Page (mail.google.com)
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
+This project is proprietary and is not open source. No use, execution, copying, modification, distribution, hosting, or commercial exploitation is permitted without prior written permission. See [LICENSE](LICENSE). Third-party components and assets remain subject to their respective licenses.
 
 ## Author
 
 **Gazi Enes Sedef** - [Lorewound](https://github.com/lorewound)
+
+## Operational documentation
+
+[Security policy](SECURITY.md) · [Service configuration and operations](SERVICES.md)

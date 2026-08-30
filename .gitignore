@@ -1,0 +1,17 @@
+# >>> Lorewound local-state policy >>>
+# Secrets: commit examples only, never real values
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.template
+
+# Local AI/editor and hosted-agent state
+.local/
+.replit
+.bolt/
+.bolt
+.cursor/
+.cursor
+# <<< Lorewound local-state policy <<<

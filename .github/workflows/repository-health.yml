@@ -1,0 +1,49 @@
+name: Repository Health
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repository-health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Verify required documentation
+        shell: bash
+        run: |
+          test -f README.md
+          test -f MAINTENANCE.md
+
+      - name: Reject local agent state
+        shell: bash
+        run: |
+          if git ls-files | grep -E '(^|/)(\.local|\.replit|\.bolt|\.cursor)(/|$)'; then
+            echo 'Local agent/editor state must not be committed.'
+            exit 1
+          fi
+
+      - name: Reject tracked private environment files
+        shell: bash
+        run: |
+          tracked_env="$(git ls-files | grep -E '(^|/)\.env($|\.)' | grep -Ev '(example|sample|template)$' || true)"
+          if [ -n "$tracked_env" ]; then
+            echo "$tracked_env"
+            echo 'Private environment files must not be committed.'
+            exit 1
+          fi
+
+      - name: Detect unresolved merge markers
+        shell: bash
+        run: |
+          if git grep -nE '^(<<<<<<< |>>>>>>> )' -- ':!*.lock'; then
+            echo 'Unresolved merge markers found.'
+            exit 1
+          fi
