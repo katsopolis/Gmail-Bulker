@@ -27,3 +27,5 @@
 .claude/agent-memory-local
 .claude/first-run
 .claude/assistant-daemon-state.json
+
+.DS_Store
