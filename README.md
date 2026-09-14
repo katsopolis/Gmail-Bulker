@@ -202,3 +202,9 @@ This project is proprietary and is not open source. No use, execution, copying, 
 ## Operational documentation
 
 [Security policy](SECURITY.md) · [Service configuration and operations](SERVICES.md)
+
+## Documentation map
+
+- [GUIDELINES.md](GUIDELINES.md): project-specific design, architecture, quality and release rules
+- [SERVICES.md](SERVICES.md): hosted, local, offline, build-time and platform service boundaries
+- [SECURITY.md](SECURITY.md): vulnerability reporting, credentials and security controls
