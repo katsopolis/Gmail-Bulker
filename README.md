@@ -64,8 +64,6 @@ The maintained project summary above is canonical. The original detailed documen
 
 ![Extension logo](img/logo_128-revert.png)
 
-# Gmail Bulker
-
 Gmail Bulker downloads every Gmail attachment and Google Drive file link from an open conversation as a single ZIP, preserving original filenames and formats.
 
 ## Key Features
