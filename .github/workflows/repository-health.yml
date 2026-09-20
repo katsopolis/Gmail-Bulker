@@ -20,6 +20,9 @@ jobs:
         shell: bash
         run: |
           test -f README.md
+          test -f GUIDELINES.md
+          test -f SECURITY.md
+          test -f SERVICES.md
           test -f MAINTENANCE.md
 
       - name: Reject local agent state
