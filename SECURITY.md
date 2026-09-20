@@ -23,7 +23,7 @@ Development fixes target the current `main` branch. Reports about distributed bu
 
 ## Dependency Advisories
 
-- Dependabot configuration is in `.github/dependabot.yml`; it covers only listed ecosystems and directories. Confirm actual runs and review remaining native/system dependencies separately. A config file does not prove monitoring is active.
+- Dependencies are not monitored by an automated update bot. Run `npm audit` (or the ecosystem's equivalent) and review production-path advisories manually before each release, and review native/system dependencies separately.
 - Review production-path critical/high advisories before a release; do not apply major-version dependency bumps without testing.
 
 ## Related
